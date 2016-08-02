@@ -3,7 +3,7 @@ Angular 1.x Example project
 
 ## Getting Started
 
-To get you started you can simply clone the [angular-es6-starter](https://github.com/adrianhdezm/angular-es6-starter) repository and install all their dependencies:
+To get you started you can simply clone the [angular-es6-starter](https://github.com/adrianhdezm/angular-es6-starter) repository and install all its dependencies:
 
 ### Prerequisites
 
