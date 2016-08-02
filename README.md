@@ -7,8 +7,4 @@ You need the following installed:
 * [Node](https://nodejs.org)
 * [npm](https://www.npmjs.com)
 
-Optionally
-* [Webpack](https://github.com/webpack/webpack)
-
-
 
