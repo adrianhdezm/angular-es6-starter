@@ -2,11 +2,15 @@
 
 import angular from 'angular';
 
-import container from './components/container/container';
+import heroList from './components/HeroList/heroList';
+import heroDetail from './components/HeroDetail/heroDetail';
+import editableField from './components/EditableField/editableField';
 
-var appModule = angular.module('app', [
-    container.name
-]);
+var appModule = angular.module('app', []);
+
+appModule.component('editableField', editableField);
+appModule.component('heroList', heroList);
+appModule.component('heroDetail', heroDetail);
 
 
 angular.element(document).ready(function() {
