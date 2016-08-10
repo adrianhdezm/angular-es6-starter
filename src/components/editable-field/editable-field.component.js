@@ -1,7 +1,20 @@
 
 'use strict';
 
-import template from './editableField.tpl.html';
+import template from './editable-field.template.html';
+
+class EditableFieldComponent {
+    constructor(){
+        this.template= template;
+            this.controller=EditableFieldController;
+            this.bindings = {
+            fieldValue: '<',
+                fieldType: '@?',
+                onUpdate: '&'
+        }
+    }
+}
+
 
 class EditableFieldController {
 
@@ -32,12 +45,4 @@ class EditableFieldController {
     };
 }
 
-export default {
-    template: template,
-    controller: EditableFieldController,
-    bindings: {
-        fieldValue: '<',
-        fieldType: '@?',
-        onUpdate: '&'
-    }
-};
+export default EditableFieldComponent;

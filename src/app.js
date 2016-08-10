@@ -2,15 +2,15 @@
 
 import angular from 'angular';
 
-import heroList from './components/HeroList/heroList';
-import heroDetail from './components/HeroDetail/heroDetail';
-import editableField from './components/EditableField/editableField';
+import ItemList from './components/item-list/item-list';
+import EditableField from './components/editable-field/editable-field';
+import ItemDetail from './components/item-detail/item-detail';
 
-var appModule = angular.module('app', []);
-
-appModule.component('editableField', editableField);
-appModule.component('heroList', heroList);
-appModule.component('heroDetail', heroDetail);
+var appModule = angular.module('app', [
+    EditableField.name,
+    ItemList.name,
+    ItemDetail.name
+]);
 
 
 angular.element(document).ready(function() {

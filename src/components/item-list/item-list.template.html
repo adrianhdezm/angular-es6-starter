@@ -1,0 +1,8 @@
+<b>Items</b>
+<br>
+<item-detail
+        ng-repeat="item in $ctrl.list"
+        item="item"
+        on-delete="$ctrl.delete(item)"
+        on-update="$ctrl.update(item, prop, value)">
+</item-detail>

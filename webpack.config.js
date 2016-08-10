@@ -29,10 +29,6 @@ module.exports = {
             {
                 test: /\.html$/,
                 loader: 'html'
-            },
-            {
-                test: /\tpl.html$/,
-                loader: 'ngtemplate!html'
             }
         ]
     },
