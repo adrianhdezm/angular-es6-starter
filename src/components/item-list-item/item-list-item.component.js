@@ -1,12 +1,12 @@
 'use strict';
 
-import template from './item-detail.template.html';
+import template from './item-list-item.template.html';
 
 
-class ItemDetailComponent {
+class ItemListItemComponent {
     constructor(){
         this.template = template;
-        this.controller = ItemDetailController;
+        this.controller = ItemListItemController;
         this.bindings = {
             item: '<',
             onDelete: '&',
@@ -16,7 +16,7 @@ class ItemDetailComponent {
 }
 
 
-class ItemDetailController{
+class ItemListItemController{
 
     delete() {
         this.onDelete({item: this.item});
@@ -34,4 +34,4 @@ class ItemDetailController{
 };
 
 
-export default ItemDetailComponent;
+export default ItemListItemComponent;

@@ -1,0 +1,6 @@
+<hr>
+<div>
+    Name: {{$ctrl.item.name}}<br>
+    Location: <editable-field field-value="$ctrl.item.location" field-type="text" on-update="$ctrl.update('location', value)"></editable-field><br>
+    <button ng-click="$ctrl.delete()">Delete</button>
+</div>
