@@ -4,7 +4,7 @@
 function Config ($stateProvider, $urlRouterProvider){
 
         // For any unmatched url, redirect to /home
-        $urlRouterProvider.otherwise("/dashboard");
+        $urlRouterProvider.otherwise("/items");
 
         $stateProvider
             .state('dashboard', {

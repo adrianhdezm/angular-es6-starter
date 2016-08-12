@@ -17,16 +17,6 @@ class ListComponent {
 
 class ItemListController{
 
-    update(item, prop, value) {
-        item[prop] = value;
-    };
-
-    delete(item) {
-        var idx = this.list.indexOf(item);
-        if (idx >= 0) {
-            this.list.splice(idx, 1);
-        }
-    };
 
 }
 

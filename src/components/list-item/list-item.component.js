@@ -8,9 +8,7 @@ class ListItemComponent {
         this.template = template;
         this.controller = ListItemController;
         this.bindings = {
-            item: '<',
-            onDelete: '&',
-            onUpdate: '&'
+            item: '<'
         };
     }
 }
@@ -18,20 +16,21 @@ class ListItemComponent {
 
 class ListItemController{
 
+    constructor(itemsStoreService) {
+        this.itemsStoreService = itemsStoreService;
+    }
+
     delete() {
-        this.onDelete({item: this.item});
+        this.itemsStoreService.deleteItem(this.item);
     };
 
     update(prop, value) {
-        this.onUpdate(
-            {
-                item: this.item,
-                prop: prop,
-                value: value
-            });
+        this.itemsStoreService.updateItemProperty(this.item,prop, value)
     };
 
 };
+
+ListItemController.$inject = ['itemsStoreService'];
 
 
 export default ListItemComponent;

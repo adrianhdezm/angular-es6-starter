@@ -1,16 +1,15 @@
-
 'use strict';
 
 import template from './editable-field.template.html';
 
 class EditableFieldComponent {
-    constructor(){
-        this.template= template;
-            this.controller = EditableFieldController;
-            this.bindings = {
+    constructor() {
+        this.template = template;
+        this.controller = EditableFieldController;
+        this.bindings = {
             fieldValue: '<',
-                fieldType: '@?',
-                onUpdate: '&'
+            fieldType: '@?',
+            onUpdate: '&'
         }
     }
 }

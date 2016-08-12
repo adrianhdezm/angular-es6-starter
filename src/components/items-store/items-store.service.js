@@ -16,6 +16,17 @@ class ItemsStoreService {
     getItem(id) {
        return this.items[id];
     }
+
+    deleteItem(item) {
+        var idx = this.items.indexOf(item);
+        if (idx >= 0) {
+            this.items.splice(idx, 1);
+        }
+    }
+
+    updateItemProperty(item, prop, value) {
+        item[prop] = value;
+    };
 }
 
 
