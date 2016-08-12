@@ -4,21 +4,21 @@
 function Config ($stateProvider, $urlRouterProvider){
 
         // For any unmatched url, redirect to /home
-        $urlRouterProvider.otherwise("/items");
+        $urlRouterProvider.otherwise("/dashboard");
 
         $stateProvider
-            .state('items', {
+            .state('dashboard', {
                 url: '/items',
-                component: 'dashboard',
+                component: 'viewDashboard',
                 resolve: {
-                    items: [ 'itemStoreService', (itemStoreService) => {return itemStoreService.getItems()}]
+                    items: [ 'itemsStoreService', (itemStoreService) => {return itemStoreService.getItems()}]
                 }
             })
             .state('details', {
                 url: '/items/:itemId',
-                component: 'itemDetail',
+                component: 'viewDetails',
                 resolve: {
-                    item: ['$stateParams', 'itemStoreService', ($stateParams,itemStoreService) => {return itemStoreService.getItem($stateParams.itemId)}]
+                    item: ['$stateParams', 'itemsStoreService', ($stateParams,itemStoreService) => {return itemStoreService.getItem($stateParams.itemId)}]
                 }
             });
 

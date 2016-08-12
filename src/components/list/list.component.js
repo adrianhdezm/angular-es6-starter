@@ -1,9 +1,9 @@
 'use strict';
 
-import template from './item-list.template.html';
+import template from './list.template.html';
 
 
-class ItemListComponent {
+class ListComponent {
 
     constructor() {
         this.template = template;
@@ -31,4 +31,4 @@ class ItemListController{
 }
 
 
-export default ItemListComponent;
+export default ListComponent;

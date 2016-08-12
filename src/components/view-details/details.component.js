@@ -1,9 +1,9 @@
 'use strict';
 
-import template from './item-detail.template.html';
+import template from './details.template.html';
 
 
-class ItemDetailComponent {
+class DetailsComponent {
     constructor(){
         this.template = template;
         this.bindings = {
@@ -14,4 +14,4 @@ class ItemDetailComponent {
 
 
 
-export default ItemDetailComponent;
+export default DetailsComponent;

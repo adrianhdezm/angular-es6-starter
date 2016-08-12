@@ -3,12 +3,12 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 
-import ItemList from './components/item-list/item-list';
-import ItemListItem from './components/item-list-item/item-list-item';
+import ItemList from './components/list/list';
+import ItemListItem from './components/list-item/list-item';
 import EditableField from './components/editable-field/editable-field';
-import ItemDetail from './components/item-detail/item-detail';
-import Dashboard from './components/dashboard/dashboard';
-import ItemStore from './components/item-store/item-store';
+import Details from './components/view-details/details';
+import Dashboard from './components/view-dashboard/dashboard';
+import Store from './components/items-store/items-store';
 
 
 import Config from './config';
@@ -16,9 +16,9 @@ import Config from './config';
 
 var appModule = angular.module('app', [
     uiRouter,
-    ItemStore.name,
+    Store.name,
     Dashboard.name,
-    ItemDetail.name,
+    Details.name,
     EditableField.name,
     ItemList.name,
     ItemListItem.name,

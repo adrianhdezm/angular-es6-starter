@@ -6,4 +6,4 @@ import Dashboard from './dashboard.component'
 
 
 export default angular.module('dashboard', [])
-    .component('dashboard', new Dashboard)
+    .component('viewDashboard', new Dashboard)
