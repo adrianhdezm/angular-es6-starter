@@ -1,6 +1,6 @@
 <div>
     <h1> {{$ctrl.item.name}} </h1>
     <hr>
-    Name: {{$ctrl.item.name}} <br />
+    Name: <editable-field field-value="$ctrl.item.name" field-type="text" on-update="$ctrl.update('name', value)"></editable-field> <br />
     Location: <editable-field field-value="$ctrl.item.address" field-type="text" on-update="$ctrl.update('address', value)"></editable-field><br />
 </div>
