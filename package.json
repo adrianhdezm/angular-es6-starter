@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "angular": "^1.5.8",
-    "angular-route": "^1.5.8"
+    "angular-ui-router": "^1.0.0-alpha.5"
   },
   "engines": {
     "node": ">=4.3"

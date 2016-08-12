@@ -8,24 +8,14 @@ class ItemListComponent {
     constructor() {
         this.template = template;
         this.controller = ItemListController;
+        this.bindings = {
+            list: '<'
+        };
     }
 }
 
 
 class ItemListController{
-
-    constructor() {
-        this.list =[
-            {
-                name: 'Superman',
-                location: ''
-            },
-            {
-                name: 'Batman',
-                location: 'Wayne Manor'
-            }
-        ];
-    }
 
     update(item, prop, value) {
         item[prop] = value;

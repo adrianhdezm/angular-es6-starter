@@ -9,7 +9,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
 
     entry: {
-        'vendor': ['angular','angular-route'],
+        'vendor': ['angular','angular-ui-router'],
         'app': path.resolve(__dirname,'src/app.js')
     },
     output: {

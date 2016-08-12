@@ -1,6 +1,6 @@
 <hr>
 <div>
-    Name: {{$ctrl.item.name}}<br>
+    Name: {{$ctrl.item.name}} -> <a ui-sref="details({ itemId:{{$ctrl.item.id}} })">Go</a> <br>
     Location: <editable-field field-value="$ctrl.item.location" field-type="text" on-update="$ctrl.update('location', value)"></editable-field><br>
     <button ng-click="$ctrl.delete()">Delete</button>
 </div>
