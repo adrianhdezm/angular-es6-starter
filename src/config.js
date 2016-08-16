@@ -1,7 +1,7 @@
 'use strict';
 
-
-function Config ($stateProvider, $urlRouterProvider){
+config.$inject = ['$stateProvider', '$urlRouterProvider'];
+function config ($stateProvider, $urlRouterProvider){
 
         // For any unmatched url, redirect to /home
         $urlRouterProvider.otherwise("/items");
@@ -11,21 +11,32 @@ function Config ($stateProvider, $urlRouterProvider){
                 url: '/items',
                 component: 'viewDashboard',
                 resolve: {
-                    items: [ 'itemsStoreService', (itemStoreService) => {return itemStoreService.getItems()}]
+                    items: resolveItems
                 }
             })
             .state('details', {
                 url: '/items/:itemId',
                 component: 'viewDetails',
                 resolve: {
-                    item: ['$stateParams', 'itemsStoreService', ($stateParams,itemStoreService) => {return itemStoreService.getItem($stateParams.itemId)}]
+                    item: resolveItem
                 }
             });
 
 
     }
 
-Config.$inject = ['$stateProvider', '$urlRouterProvider'];
+
+resolveItems.$inject = ['itemsStoreService'];
+function resolveItems(itemStoreService)  {
+    return itemStoreService.getItems();
+}
 
 
-export default Config;
+resolveItem.$inject = ['$stateParams', 'itemsStoreService'];
+function resolveItem($stateParams,itemStoreService)  {
+    return itemStoreService.getItem($stateParams.itemId);
+}
+
+
+
+export default config;
