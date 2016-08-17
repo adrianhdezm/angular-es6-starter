@@ -16,7 +16,9 @@ class ListComponent {
 
 
 class ItemListController{
+    constructor(){
 
+    }
 
 }
 

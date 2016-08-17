@@ -9,6 +9,8 @@ import EditableField from './components/editable-field/editable-field';
 import Details from './components/view-details/details';
 import Dashboard from './components/view-dashboard/dashboard';
 import Store from './components/items-store/items-store';
+import Breadcrumbs from './components/breadcrumbs/breadcrumbs'
+
 
 
 import Config from './config';
@@ -17,6 +19,7 @@ import Config from './config';
 var appModule = angular.module('app', [
     uiRouter,
     Store.name,
+    Breadcrumbs.name,
     Dashboard.name,
     Details.name,
     EditableField.name,
