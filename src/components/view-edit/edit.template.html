@@ -1,0 +1,10 @@
+<div>
+    <span> Editing: {{$ctrl.item.name}} </span>
+    <hr>
+    <form novalidate class="edit-form">
+        Name: <input type="text" ng-model="$ctrl.model.name" /><br />
+        Address: <input type="text" ng-model="$ctrl.model.address" /><br />
+        <input type="button" ng-click="$ctrl.reset()" value="Reset" />
+        <input type="submit" ng-click="$ctrl.update()" value="Save" ui-sref="details({ itemId:{{$ctrl.item.index}} })"/>
+    </form>
+</div>

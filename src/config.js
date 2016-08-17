@@ -20,8 +20,14 @@ function config ($stateProvider, $urlRouterProvider){
                 resolve: {
                     item: resolveItem
                 }
+            })
+            .state('edit', {
+                url: '/items/:itemId/edit',
+                component: 'viewEdit',
+                resolve: {
+                    item: resolveItem
+                }
             });
-
 
     }
 

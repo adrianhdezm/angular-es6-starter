@@ -17,6 +17,14 @@ class ItemsStoreService {
        return this.items[id];
     }
 
+
+    updateItem(olditem,newItem) {
+        var idx = this.items.indexOf(olditem);
+        if (idx >= 0) {
+            this.items[idx] = newItem;
+        }
+    }
+
     deleteItem(item) {
         var idx = this.items.indexOf(item);
         if (idx >= 0) {
