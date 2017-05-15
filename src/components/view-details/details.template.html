@@ -1,6 +1,0 @@
-<div>
-    <h1> {{$ctrl.item.name}} </h1> <button><a ui-sref="edit({ itemId:{{$ctrl.item.index}} })">Edit </a> </button>
-    <hr>
-    Name: <editable-field field-value="$ctrl.item.name" field-type="text" on-update="$ctrl.update('name', value)"></editable-field> <br />
-    Location: <editable-field field-value="$ctrl.item.address" field-type="text" on-update="$ctrl.update('address', value)"></editable-field><br />
-</div>

@@ -1,15 +1,15 @@
-
 'use strict';
 
 var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 
 module.exports = {
 
     entry: {
-        'vendor': ['angular','angular-ui-router'],
+        'vendor': ['angular','angular-animate','angular-aria','angular-messages','angular-material','angular-material-icons','angular-ui-router'],
         'app': path.resolve(__dirname,'src/app.js')
     },
     output: {
@@ -29,6 +29,11 @@ module.exports = {
             {
                 test: /\.html$/,
                 loader: 'html'
+            },
+            // Extract css files
+            {
+                test: /\.css$/,
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader")
             }
         ]
     },
@@ -40,6 +45,8 @@ module.exports = {
 
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname,'src/index.html')
-        })
+        }),
+
+        new ExtractTextPlugin("styles/[name].css"),
     ]
 };

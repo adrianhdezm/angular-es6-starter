@@ -3,38 +3,28 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 
-import ItemList from './components/list/list';
-import ItemListItem from './components/list-item/list-item';
-import EditableField from './components/editable-field/editable-field';
-import Details from './components/view-details/details';
-import Edit from './components/view-edit/edit';
-import Dashboard from './components/view-dashboard/dashboard';
-import Store from './components/items-store/items-store';
-import Breadcrumbs from './components/breadcrumbs/breadcrumbs'
+import angularMaterial from 'angular-material';
+import 'angular-material/angular-material.css';
 
+import ngMdIcons from 'angular-material-icons';
 
+import Routes from './config/routes';
+import Middlewares from './config/middlewares';
 
-import Config from './config';
+import AppContent from './components/app-content/app-content';
 
-
-var appModule = angular.module('app', [
+const app = angular.module('app', [
     uiRouter,
-    Store.name,
-    Breadcrumbs.name,
-    Dashboard.name,
-    Details.name,
-    Edit.name,
-    EditableField.name,
-    ItemList.name,
-    ItemListItem.name,
+    angularMaterial,
+    ngMdIcons,
+    AppContent.name
 ]);
 
-appModule.config(Config);
+app.config(Routes);
+app.config(Middlewares);
 
 angular.element(document).ready(function() {
-    return angular.bootstrap(document.body, [appModule.name], {
-        strictDi: true
+    return angular.bootstrap(document.body, [app.name], {
+    strictDi: true
     });
 });
-
-export default appModule;
